@@ -42,7 +42,6 @@ const SearchHistoryPage = () => {
         const res = await axios.get(`/api/v1/search/history`);
         setSearchHistory(res.data.content);
       } catch (error) {
-        console.log(error.message);
         setSearchHistory([]);
       }
     };
