@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": { target: "https://movie-project-backend.vercel.app/" },
+      "/api": { target: "http://localhost:5005" },
     },
   },
 });
