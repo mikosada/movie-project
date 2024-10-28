@@ -26,6 +26,9 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/movie", protectRoute, movieRoutes);
 app.use("/api/v1/tv", protectRoute, tvRoutes);
 app.use("/api/v1/search", protectRoute, searchRoutes);
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
 
 if (ENV_VARS.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/dist")));
