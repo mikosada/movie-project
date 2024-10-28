@@ -126,3 +126,11 @@ export async function authCheck(req, res) {
     res.status(500).json({ success: false, message: "Internal server error" });
   }
 }
+
+export async function testing(req, res) {
+  try {
+    res.status(200).json({ success: true, message: "Hello" });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Internal server error" });
+  }
+}

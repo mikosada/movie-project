@@ -4,6 +4,7 @@ import {
   login,
   logout,
   signup,
+  testing,
 } from "../controllers/auth.controller.js";
 import { protectRoute } from "../middleware/protectRoute.js";
 
@@ -14,5 +15,6 @@ router.post("/login", login);
 router.post("/logout", logout);
 
 router.get("/authCheck", protectRoute, authCheck);
+router.get("/testing", testing);
 
 export default router;
